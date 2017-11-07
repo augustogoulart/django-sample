@@ -9,7 +9,7 @@ from django.apps import apps
 from celery import Celery
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_sample.settings.local")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_sample.settings.production")
 
 app = Celery('django_sample_tasks')
 app.config_from_object('django.conf:settings', namespace='CELERY')
