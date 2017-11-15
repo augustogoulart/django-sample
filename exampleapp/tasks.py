@@ -11,5 +11,5 @@ app = Celery('tasks', backend='redis://redis.eastus.cloudapp.azure.com:6379',
 
 
 @app.task
-def add(x, y):
-    return x + y, User.objects.all()
+def add():
+    return User.objects.all()
